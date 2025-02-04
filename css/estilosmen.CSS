@@ -59,8 +59,8 @@
 #menuvertical li a:hover{
     background-color:white;
     text-align: right;
-    margin-top: 6px;
-    padding-bottom: 6px;
+    margin-top: 5px;
+    padding-bottom: 2px;
 }
 #banner{
     font:bold 32px broadway, sans-serif;
