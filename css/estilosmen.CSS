@@ -6,7 +6,7 @@
 }
 #boton{
     padding: 0;
-    text-align: center;
+    text-align: right;
     position: absolute;
 
     top:39%;
@@ -16,7 +16,7 @@
 }
 #boton li{
     display: inline;
-    text-align: center;
+    text-align: right;
 }
 #boton li a{
     font-family: Arial;
@@ -58,7 +58,7 @@
 }
 #menuvertical li a:hover{
     background-color:white;
-    text-align:right;
+    text-align: right;
     margin-top: 6px;
     padding-bottom: 5px;
 }
