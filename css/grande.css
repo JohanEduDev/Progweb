@@ -1,5 +1,5 @@
 .grande{
-    display: inherit limportant;
+    display: inherit !important;
 }
 h1,h2{
     text-align: center;
