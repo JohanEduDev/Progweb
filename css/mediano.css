@@ -1,5 +1,5 @@
 .mediano{
-    display: inherit limportant;
+    display: inherit !important;
 }
 body{
     font-family: Georgia;
