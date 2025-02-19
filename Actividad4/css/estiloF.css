@@ -1,5 +1,5 @@
 #registrousuario{
-    background: transparent url("img/field.jpg") no-repeat scroll left bottom;
+    background: transparent url("../img/field.jpg") no-repeat scroll left bottom;
     border: medium none;
     color: #990033;
     height: 725px;
@@ -9,7 +9,7 @@
     border-radius:10px;
 }
 #registrousuario legend{
-    background: transparent url("img/legend.jpg") no-repeat scroll left;
+    background: transparent url("../img/legend.jpg") no-repeat scroll left;
     border: medium none !important;
     color: #000000;
     font-family:Arial;
@@ -23,7 +23,7 @@
     text-align: center;
 }
 #registrousuario input.texto{
-    background:#000000 url("img/field.jpg") no-repeat scroll left top;
+    background:#000000 url("../img/field.jpg") no-repeat scroll left top;
     border: medium none !important;
     color: #ffffff;
     font-family: Arial, sans-serif;
@@ -44,7 +44,7 @@
     color: #000000;
 }
 #registrousuario textarea.areadetexto{
-    background: #FFFFFF url("img/field.jpg") no-repeat scroll top left;
+    background: #FFFFFF url("../img/field.jpg") no-repeat scroll top left;
     color: #ffffff;
     font-family: arial,sans-serif;
     font-size: 12px;
@@ -57,7 +57,7 @@
     border-radius:20px;
 }
 #registrousuario input.botonenviar{
-    background:transparent url("img/enviar.jpg") no-repeat scroll left top;
+    background:transparent url("../img/enviar.jpg") no-repeat scroll left top;
     color: #000000;
     display: block;
     float: left;
