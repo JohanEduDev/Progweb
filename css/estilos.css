@@ -1,4 +1,4 @@
-/* Reset básico */
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -10,58 +10,60 @@ html {
 }
 
 body {
-    font-size: 16px;
-    margin: 0 auto;
+    font-size: 80%;
+    max-width: 750px;
+    margin: auto;
     background-color: pink;
-    max-width: 100%;
 }
 
-header, nav, main, footer {
+/* ================== ESTRUCTURA PRINCIPAL ================== */
+header,
+nav,
+main,
+footer {
     width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+    clear: both;
 }
 
 header {
+    height: auto;
     background-color: yellow;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow: hidden;
 }
 
 nav {
     background-color: blue;
-    height: 8vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    height: auto;
+    padding: 10px 0;
 }
 
 main {
     background-color: green;
-    height: 50vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    overflow: hidden;
 }
 
 footer {
+    height: 50px;
     background-color: orange;
-    height: 8vh;
     text-align: center;
-    padding: 10px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #333;
 }
 
-/* Layout de secciones dentro de header */
-section#banner, section#logo, section#login {
-    flex: 1;
-    height: 100%;
-    margin: 5px;
-}
-
+/* ================== HEADER SECTIONS ================== */
 section#banner {
+    width: 66.66%;
+    height: 250px;
+    float: left;
     background-color: red;
+}
+
+section#logo,
+section#login {
+    width: 33.33%;
+    height: 125px;
+    float: left;
 }
 
 section#logo {
@@ -72,103 +74,163 @@ section#login {
     background-color: magenta;
 }
 
-/* Layout para aside y article */
-aside#left, aside#right, article {
-    margin: 5px;
+/* ================== MENÚ SUPERIOR ================== */
+#menu {
+    width: 100%;
+    text-align: center;
 }
 
-aside#left {
-    background-color: purple;
-    flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
-    height: auto;
+#boton {
+    list-style: none;
+    padding: 0;
 }
 
+#boton li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#boton li a {
+    font-family: Arial;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}
+
+#boton li a:hover {
+    background-color: #2586d7;
+}
+
+/* ================== MENÚ LATERAL VERTICAL ================== */
+#menu2 {
+    width: 20%;
+    float: left;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    padding: 10px 0;
+}
+
+#menuvertical {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menuvertical > li {
+    position: relative;
+}
+
+#menuvertical a {
+    display: block;
+    padding: 10px;
+    color: gray;
+    text-decoration: none;
+}
+
+#menuvertical li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+#menuvertical li:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* ================== CONTENIDO CENTRAL ================== */
 article {
+    width: 60%;
+    float: left;
     background-color: lightblue;
-    flex: 3 1 500px;
-    height: auto;
+    height: 400px;
+    padding: 10px;
 }
 
 aside#right {
+    width: 20%;
+    float: left;
     background-color: red;
-    flex: 0 1 100px;
-    height: auto;
+    height: 400px;
 }
 
-/* Media Queries para Pantallas Más Pequeñas (como móviles) */
+/* ================== RESPONSIVE PARA PANTALLAS PEQUEÑAS ================== */
 @media (max-width: 768px) {
     body {
+        width: 100%;
         font-size: 14px;
     }
 
-    /* Ajustar la altura de header y otros elementos */
-    header {
-        height: 20vh;
+    header,
+    nav,
+    main,
+    footer {
+        width: 100%;
     }
 
-    nav {
-        height: 10vh;
-    }
-
-    main {
-        flex-direction: column;
+    section#banner,
+    section#logo,
+    section#login,
+    #menu2,
+    article,
+    aside#right {
+        width: 100%;
+        float: none;
         height: auto;
     }
 
-    aside#left, aside#right {
-        flex: 1 1 100%;
+    #boton li {
+        display: block;
+        margin: 5px 0;
     }
 
-    article {
-        flex: 1 1 100%;
-        height: auto;
+    #boton li a {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
 
-    section#banner, section#logo, section#login {
-        width: 100%;
-        margin: 5px;
+    #menu2 {
+        border-radius: 0;
+        padding: 10px;
     }
 
-    footer {
-        height: 10vh;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Ajuste en la fuente para pantallas más pequeñas */
-    body {
-        font-size: 12px;
+    .submenu {
+        position: static;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
     }
 
-    header {
-        height: 25vh;
+    .submenu li a {
+        padding-left: 20px;
     }
 
-    nav {
-        height: 12vh;
+    #menuvertical li:hover .submenu {
+        display: block;
     }
 
-    footer {
-        height: 12vh;
-    }
-
-    section#banner, section#logo, section#login {
-        flex: 1 1 100%;
-        width: 100%;
-    }
-
-    aside#left, aside#right {
-        width: 100%;
-        flex: 1;
-    }
-
-    article {
-        width: 100%;
-        flex: 1;
-    }
-
-    main {
-        flex-direction: column;
-        padding: 5px;
+    article,
+    aside#right {
+        padding: 10px;
     }
 }
