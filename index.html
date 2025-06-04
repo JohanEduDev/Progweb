@@ -1,81 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta charset="iso-8859-1">
-        <meta name="description" content="Ejemplo HTML5">
-        <meta name="keywords" content="HTML5", CSS3, JavaScript>
-
-        <title> Maquetación</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo HTML5">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript">
+    <title>Maquetación</title>
     <script src="modernizar.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="css/estilosmen.CSS">
-    
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilosmen.css">
+    <style>
+        /* CSS básico responsivo agregado */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, main, footer {
+            padding: 10px;
+        }
+
+        #banner {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo img, #login img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #menu ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            list-style: none;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            background: #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        aside#left {
+            flex: 1 1 200px;
+        }
+
+        article {
+            flex: 2 1 300px;
+            padding: 10px;
+        }
+
+        #imagen img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #presenta {
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #eee;
+            padding: 10px;
+        }
+
+        /* Submenú en móviles */
+        .submenu {
+            display: none;
+        }
+
+        li:hover .submenu {
+            display: block;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main {
+                flex-direction: column;
+            }
+
+            #menu ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <section id="banner"><br><br><br>Mi Rinconcito Educativo Mx</section>
-        <section id="logo"><center><img src="img/logo.jpeg" height="122" width="248"></center></section>
-        <section id="login"><center><img src="img/login.jpg" height="123" width="248"></center></section>
-
+        <section id="banner">Mi Rinconcito Educativo Mx</section>
+        <section id="logo"><img src="img/logo.jpeg" alt="Logo"></section>
+        <section id="login"><img src="img/login.jpg" alt="Login"></section>
     </header>
+
     <nav id="menu">
         <ul id="boton">
             <li><a href="#">Home</a></li>
-            <li><a href="#">¿Quien Soy?</a></li>
+            <li><a href="#">¿Quién Soy?</a></li>
             <li><a href="#">Mi empresa</a></li>
-            <li><a href="#">Carrito de compras</a></li>
+            <li><a href="#">Carrito</a></li>
             <li><a href="Actividad4/formulario.html">Contacto</a></li>
-            <li><a href="#">Mapa de sitio</a></li>
+            <li><a href="#">Mapa</a></li>
         </ul>
     </nav>
+
     <main>
         <aside id="left">
             <nav id="menu2">
                 <ul id="menuvertical">
                     <li>
-                       <a href="#">Actividades</a>
-                      <!-- Submenú -->
-                       <ul class="submenu">
-                        <li><a href="Actividad5/MenuResponsive.html">Actividad 5</a></li>
-                        <li><a href="Actividad6/MenuVerticalMult.html">Actividad 6</a></li>
-                        <li><a href="Actividad7/calculadora.html">Actividad 7</a></li>
-                        <li><a href="Actividad8/animacion.html">Actividad 8</a></li> 
-                        <li><a href="Actividad15/Grafico.html">Actividad 15</a></li>   
-                        <li><a href="Actividad16/Graficos.html">Actividad 16</a></li>       
-                       </ul>
+                        <a href="#">Actividades</a>
+                        <ul class="submenu">
+                            <li><a href="Actividad5/MenuResponsive.html">Actividad 5</a></li>
+                            <li><a href="Actividad6/MenuVerticalMult.html">Actividad 6</a></li>
+                            <li><a href="Actividad7/calculadora.html">Actividad 7</a></li>
+                            <li><a href="Actividad8/animacion.html">Actividad 8</a></li>
+                            <li><a href="Actividad15/Grafico.html">Actividad 15</a></li>
+                            <li><a href="Actividad16/Graficos.html">Actividad 16</a></li>
+                        </ul>
                     </li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="#">Login HTML5</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="#">Slider 3D</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="#">Carrusel 3D</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="#">Menu 3D</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="Actividad3/adaptable.html">Responsive Design</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="#">Mi proyecto</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
                     <li><a href="https://johanedudev.github.io/Actividad1/">Maquetación</a></li>
-                    <hr align="left" size="1" width="90%" noshade="0">
-            </ul>
-                </u1>
+                </ul>
             </nav>
         </aside>
+
         <article>
             <figure id="imagen">
-                <img src="img/logo.jpeg" height="225" width="200" align="middle">
+                <img src="img/logo.jpeg" alt="Logo Grande">
             </figure>
-            <div id="presenta"><h1>Hola Jóvenes<br><br></h1>Este portal es un ejemplo de lo que se 
-                pretende realizar durante la Asignatura de Programacion Web, he aqui donde enlazarán todas las actvidades que se vayan realizando. Espero que le dediquen tiempo y práctiquen mucho
-            para que se logren las competencias de apendizaje.<br><br>Les agradezco que siempre estén al pendiente de las clases. </div>
+            <div id="presenta">
+                <h1>Hola Jóvenes</h1>
+                <p>Este portal es un ejemplo de lo que se pretende realizar durante la Asignatura de Programación Web.
+                Aquí se enlazarán todas las actividades que se vayan realizando. Espero que le dediquen tiempo y practiquen mucho
+                para que se logren las competencias de aprendizaje. ¡Gracias por estar al pendiente de las clases!</p>
+            </div>
         </article>
-        <aside id="right"></aside>
     </main>
+
     <footer id="pie">
-        Derechos reservados Copyrigt 2025
+        Derechos reservados © 2025
     </footer>
 </body>
 </html>
