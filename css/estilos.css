@@ -57,7 +57,7 @@ section#banner {
     height: 250px;
     float: left;
     background-color: red;
-    font-size: 36px; /* Cambia 36px al tamaño que prefieras */
+    font-size: 50px; /* Cambia 36px al tamaño que prefieras */
     font-weight: bold;
     color: black; /* si quieres conservar el color */
     text-align: center; /* para centrar el texto */
