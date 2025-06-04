@@ -67,8 +67,8 @@
     display: none;
     list-style: none;
     position: absolute;
-    left: 100%; /* You can change to right: 0 if you want it to appear to the right */
-    top: 0;
+    left: 0%; /* You can change to right: 0 if you want it to appear to the right */
+    top: 100%;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     padding: 0;
