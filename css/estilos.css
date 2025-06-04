@@ -52,18 +52,16 @@ footer {
 }
 
 /* ================== HEADER SECTIONS ================== */
-#banner {
-    font-size: 36px; /* Cambia 36px al tamaño que prefieras */
-    font-weight: bold;
-    color: pink; /* si quieres conservar el color */
-    text-align: center; /* para centrar el texto */
-    font-family: broadway, sans-serif; /* o la fuente que usas */
-}
 section#banner {
     width: 66.66%;
     height: 250px;
     float: left;
     background-color: red;
+    font-size: 36px; /* Cambia 36px al tamaño que prefieras */
+    font-weight: bold;
+    color: black; /* si quieres conservar el color */
+    text-align: center; /* para centrar el texto */
+    font-family: broadway, sans-serif; /* o la fuente que usas */
 }
 
 section#logo,
