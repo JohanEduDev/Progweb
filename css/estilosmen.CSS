@@ -1,126 +1,238 @@
-#menu li{
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menú principal */
+#menu li {
     display: inline-block;
     list-style: none;
     padding: 5px;
-    font:bold 14px verdana,sans-serif;
+    font: bold 14px Verdana, sans-serif;
 }
-#boton{
-    padding: 0;
-    text-align: right;
-    position: absolute;
 
-    top:39%;
-    left:23%;
-    height:70%;
-    width: 60%;
+#boton {
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
 }
-#boton li{
+
+#boton li {
     display: inline;
-    text-align: right;
+    padding: 5px;
 }
-#boton li a{
+
+#boton li a {
     font-family: Arial;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     float: left;
     padding: 10px;
     background-color: orange;
     color: #fff;
-    text-align: right;
+    text-align: center;
+    border-radius: 5px;
 }
-#boton li a:hover{
+
+#boton li a:hover {
     background-color: #2586d7;
     margin-top: 2px;
     padding-bottom: 12px;
-    text-align: right;
 }
-#menu2{
-    position:absolute;
-    top:46%;
-    left: 22.5%;
-    height: 59%;
-    width: 10.5%;
 
+/* Menú lateral */
+#menu2 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    width: 15%;
     background-color: #D9D9D9;
     color: #454545;
-    -moz-border-radius:15px;
-    -webkit-border-radius:15px;
+    border-radius: 15px;
+    padding: 10px;
 }
-#menu2 li{
+
+#menu2 li {
     display: inline-block;
-    List-style: none;
+    list-style: none;
     padding: 8px;
-    font:bold 11px verdana,sans-serif;
+    font: bold 11px Verdana, sans-serif;
 }
+
 #menuvertical {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
+
 #menuvertical a {
     text-decoration: none;
     display: block;
     padding: 8px;
     color: black;
 }
+
 .submenu {
     display: none;
     list-style: none;
     position: absolute;
-    left: 0%; /* You can change to right: 0 if you want it to appear to the right */
+    left: 0%;
     top: 100%;
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     padding: 0;
 }
+
 #menuvertical li:hover .submenu {
     position: relative;
     display: block;
 }
+
 .submenu li a {
     padding: 8px;
     white-space: nowrap;
 }
-#menuvertical li a{
-    text-decoration:none;
-    color:gray;
+
+#menuvertical li a {
+    text-decoration: none;
+    color: gray;
 }
-#menuvertical li a:hover{
-    background-color:white;
+
+#menuvertical li a:hover {
+    background-color: white;
     text-align: right;
     margin-top: 5px;
     padding-bottom: 5px;
 }
-#banner{
-    font:bold 32px broadway, sans-serif;
+
+/* Banner */
+#banner {
+    font: bold 32px Broadway, sans-serif;
     text-align: center;
     color: pink;
 }
-#imagen{
-    position:absolute;
-    top: 46%;
-    left: 45%;
-    height: 100%;
-    width: auto;
-}
-#presenta{
-    position: absolute;
-    font: 11px verdana, sans-serif;
-    text-align: center;
-    color:yellow;
-    top: 78%;
-    left: 32.5%;
-    height: 13%;
-    width: 31%;
-    margin: 17px;
-    padding: 37px;
-    background-color: gray;
 
-    -moz-border-radius:14px;
-    -webkit-border-radius:14px;
+/* Imagen */
+#imagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 300px;
 }
-#pie{
-    font: 12px verdana, sans-serif;
+
+/* Presentación */
+#presenta {
+    position: absolute;
+    font: 14px Verdana, sans-serif;
     text-align: center;
-    color:green;
+    color: yellow;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+/* Pie */
+#pie {
+    font: 12px Verdana, sans-serif;
+    text-align: center;
+    color: green;
+    padding: 10px;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #boton {
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+    }
+
+    #menu2 {
+        top: 30%;
+        left: 5%;
+        width: 80%;
+        position: relative;
+        padding: 10px;
+    }
+
+    #menuvertical {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu2 li {
+        width: 100%;
+        text-align: center;
+    }
+
+    #imagen {
+        position: relative;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    #presenta {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 500px;
+    }
+
+    #banner {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #boton li a {
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    #menu2 {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    #menu2 li {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #imagen {
+        max-width: 200px;
+    }
+
+    #presenta {
+        font-size: 12px;
+        padding: 10px;
+        width: 90%;
+    }
 }
