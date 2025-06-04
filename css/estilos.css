@@ -1,77 +1,174 @@
-*{
-   margin:0;
-   padding:0;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
+html {
     background-color: black;
 }
 
-body{
-    font-size:80%;
-    width: 750px;
-    height: 750px; 
-    margin:auto;
+body {
+    font-size: 16px;
+    margin: 0 auto;
     background-color: pink;
+    max-width: 100%;
 }
 
-header{
-    width: 750px;
-    height: 250px;
+header, nav, main, footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
     background-color: yellow;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav{
-    width: 750px;
-    height: 50px;
+nav {
     background-color: blue;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-main{
-    width: 750px;
-    height: 400px;
+main {
     background-color: green;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-footer{
-    width: 750px;
-    height: 50px;
+footer {
     background-color: orange;
+    height: 8vh;
+    text-align: center;
+    padding: 10px;
 }
 
-section#banner{
-    width: 500px;
-    height: 250px;
-    float:left;
+/* Layout de secciones dentro de header */
+section#banner, section#logo, section#login {
+    flex: 1;
+    height: 100%;
+    margin: 5px;
+}
+
+section#banner {
     background-color: red;
 }
-section#logo{
-    width: 250px;
-    height: 125px;
-    float:left;
+
+section#logo {
     background-color: gray;
 }
-section#login{
-    width: 250px;
-    height: 125px;
-    float:left;
+
+section#login {
     background-color: magenta;
 }
-aside#left{
-    width: 150px;
-    height: 400px;
-    float: left;
+
+/* Layout para aside y article */
+aside#left, aside#right, article {
+    margin: 5px;
+}
+
+aside#left {
     background-color: purple;
+    flex: 1 1 150px; /* Flex-grow, flex-shrink, flex-basis */
+    height: auto;
 }
-article{
-    width: 500px;
-    height: 400px;
-    float: left;
+
+article {
     background-color: lightblue;
+    flex: 3 1 500px;
+    height: auto;
 }
-aside#right{
-    width: 100px;
-    height: 400px;
-    float: left;
+
+aside#right {
     background-color: red;
+    flex: 0 1 100px;
+    height: auto;
+}
+
+/* Media Queries para Pantallas Más Pequeñas (como móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* Ajustar la altura de header y otros elementos */
+    header {
+        height: 20vh;
+    }
+
+    nav {
+        height: 10vh;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    aside#left, aside#right {
+        flex: 1 1 100%;
+    }
+
+    article {
+        flex: 1 1 100%;
+        height: auto;
+    }
+
+    section#banner, section#logo, section#login {
+        width: 100%;
+        margin: 5px;
+    }
+
+    footer {
+        height: 10vh;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajuste en la fuente para pantallas más pequeñas */
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        height: 25vh;
+    }
+
+    nav {
+        height: 12vh;
+    }
+
+    footer {
+        height: 12vh;
+    }
+
+    section#banner, section#logo, section#login {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    aside#left, aside#right {
+        width: 100%;
+        flex: 1;
+    }
+
+    article {
+        width: 100%;
+        flex: 1;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 5px;
+    }
 }
